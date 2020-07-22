@@ -9,6 +9,20 @@ netmask2: 255.255.255.0
 # Intel NUC default eno1
 interface: ens192
 interface2: ens224
+
+# Example for using vlan with an interface
+#interface: ens3.116
+#vlan: vlan=ens3.116:ens3
+
+# Example for bonding two interfaces
+#interface: bond0
+#bond: bond=bond0:eno5,eno6:mode=802.3ad,lacp_rate=fast,miimon=100
+
+# Example for using vlan on two bonded interfaces
+#interface: bond0.116
+#vlan: vlan=bond0.116:bond0
+#bond: bond=bond0:eno5,eno6:mode=802.3ad,lacp_rate=fast,miimon=100
+
 dns: 
   - 192.168.1.20
   - 192.168.2.20
